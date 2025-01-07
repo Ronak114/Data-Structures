@@ -1,0 +1,17 @@
+public class a75M_inline {
+    public static void main(String[] args) {
+        int n = 6;
+        
+        // Inline Fibonacci calculation using recursion
+        int result = (new Object() {
+            int fun(int n) {
+                if (n == 1 || n == 2) {
+                    return 1; // Base cases
+                }
+                return fun(n - 1) + fun(n - 2); // Recursive case
+            }
+        }).fun(n); // Call the inline method
+        
+        System.out.println(result);
+    }
+}
